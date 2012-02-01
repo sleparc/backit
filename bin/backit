@@ -1,7 +1,13 @@
 #!/usr/bin/env ruby
 
 require "rubygems"
-require "lib/backit/base"
+require "lib/backit"
 
-Backit::Setup.start
-Backit::Commit.start
+if ARGV.first.nil?
+  Backit::Commit.start
+else
+  case ARGV.first
+  when "setup"
+    Backit::Setup.start
+  end
+end
