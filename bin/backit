@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require "rubygems"
-require "backit"
+require "lib/backit/base"
 
-class Backit
-  puts "hello"
-end
+Backit::Setup.start
+Backit::Commit.start
