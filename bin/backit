@@ -6,8 +6,13 @@ require "lib/backit"
 if ARGV.first.nil?
   Backit::Commit.start
 else
+  worktree = ARGV[1]
+  raise "The target directory is necessary!" unless worktree
+
   case ARGV.first
   when "setup"
-    Backit::Setup.start
+    Backit::Setup.start worktree
+  when "commit"
+    Backit::Commit.start worktree
   end
 end
