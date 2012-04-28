@@ -11,7 +11,7 @@ else
 
   case ARGV.first
   when "setup"
-    Backit::Setup.start worktree
+    Backit::Setup.git_init worktree
   when "commit"
     Backit::Commit.start worktree
   end

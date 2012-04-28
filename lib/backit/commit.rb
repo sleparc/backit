@@ -1,5 +1,10 @@
 module Backit
   class Commit
+    # TO DO LIST
+    #   - commit should be done when there is something to commit
+    #   - should rename 'start' method
+
+
     def self.start(worktree)
       git = Git.get_command(worktree)
 

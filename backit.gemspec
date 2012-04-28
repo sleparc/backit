@@ -12,5 +12,6 @@ Gem::Specification.new do |s|
   s.description = "Daily backup of your files using GitHub"
   s.rubyforge_project = "backit"
   s.executables   << 'backit'
+  s.add_runtime_dependency "javan-whenever"
   s.require_paths = ["lib"]
 end

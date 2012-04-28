@@ -1,6 +1,6 @@
 module Backit
   class Setup
-    def self.start(worktree)
+    def self.git_init(worktree)
       git = Git.get_command(worktree)
 
       puts "Initializing your repository..."
@@ -17,6 +17,10 @@ module Backit
       `#{git} push origin master`
 
       puts "Done!"
+    end
+
+    def new_crontab
+
     end
   end
 end
